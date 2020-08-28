@@ -14,6 +14,7 @@ let mySwiper = new Swiper(slider, {
 
 	spaceBetween: 30,
 	loop: true,
+	speed: 1600,
 
 	pagination: {
 	    el: '.swiper-pagination',
