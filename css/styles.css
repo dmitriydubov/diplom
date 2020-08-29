@@ -222,7 +222,8 @@ button {
 
 .main__photo {
 	background: url('../img/img__main/shutterstock_shadow.png') no-repeat;
-	background-position: left -60px top 0;
+	background-size: 110%;
+    background-position: left -25px top 0;
 	padding-right: 37px;
 }
 
