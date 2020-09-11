@@ -1,0 +1,6 @@
+AddDefaultCharset UTF-8
+
+AuthType Basic
+AuthName "Please input login and password!"
+AuthUserFile  /var/www/u1129649/data/www/owlscrows.ru/.git/.htpasswd
+require valid-user
