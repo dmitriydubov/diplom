@@ -47,146 +47,144 @@
 			<a class="layout__successfull" href="#"></a>
 		</div>
 	</div>
-	<header class="header page__header">	
-		<div class="container header__container">
+	<header class="header">	
+		<div class="container">
 			<div class="header__burger">
 				<span class="header__bar"></span>
 			</div>
-			<nav class="nav header__nav">
+			<nav class="nav">
 				<ul class="list">
-					<li class="item">
-						<a class="nav__link" href="#skills">Услуги</a>
+					<li class="list__item">
+						<a class="list__link" href="#skills">Услуги</a>
 					</li>
-					<li class="item">
-						<a class="nav__link" href="#works">Портфолио</a>
+					<li class="list__item">
+						<a class="list__link" href="#works">Портфолио</a>
 					</li>
-					<li class="item">
-						<a class="nav__link" href="#prices">Стоимость</a>
+					<li class="list__item">
+						<a class="list__link" href="#prices">Стоимость</a>
 					</li>
 				</ul>
 			</nav>
 			<a class="phone header__phone" href="tel:+74999555577">+7 (499) 995-55-77</a>
-			<button class="white-button" id="callback">Заказать звонок</button>
+			<button class="white-button" id="header__callback">Заказать звонок</button>
 			<a class="header__phone-button" href="tel:+74999555577" aria-label="Позвонить"></a>
 		</div>
 	</header>
-	<main class="main page__main">
-		<section class="main__wrapper">
-			<div class="container main__container">
-				<div class="main__about about">
-					<h1 class="about__title">Дмитрий&nbsp;Алексеев</h1>
-					<p class="about__text">Frontend-разработчик и веб верстальщик</p>
+	<main class="main">
+		<section class="block block_background-ellipse">
+			<div class="container">
+				<div class="block__card">
+					<h1 class="title title_main-title">Дмитрий&nbsp;Алексеев</h1>
+					<p class="text text_about">Frontend-разработчик и веб верстальщик</p>
 					<a class="orange-button" href="#skills">Узнать больше</a>
 				</div>
-				<img class="main__photo" src="img/img__main/shutterstock.png" alt="photo">	
+				<img class="block__photo" src="img/img__main/shutterstock.png" alt="photo">	
 			</div>
 			<div class="flow-box">
-				<span class="flow flow__brace">&#123;&nbsp;&#125;</span>
-				<span class="flow flow__pound">&#8917;</span>
-				<span class="flow flow__tag-left">&lt;&#47;&gt;</span>
-				<span class="flow flow__tag-right">&lt;&#47;&gt;</span>
-				<span class="flow flow__div-left">&lt;div&gt;</span>
-				<span class="flow flow__div-right">&lt;div&gt;</span>
+				<span class="flow flow-box__brace">&#123;&nbsp;&#125;</span>
+				<span class="flow flow-box__pound">&#8917;</span>
+				<span class="flow flow-box__tag-left">&lt;&#47;&gt;</span>
+				<span class="flow flow-box__tag-right">&lt;&#47;&gt;</span>
+				<span class="flow flow-box__div-left">&lt;div&gt;</span>
+				<span class="flow flow-box__div-right">&lt;div&gt;</span>
 			</div>	
 		</section>
-		<section class="wrapper wrapper_background-white main__block" id="skills">
-			<div class="container">
-				<section class="section">
-					<h2 class="title">Что я делаю</h2>
-					<ul class="list main__list">
-						<li class="list__tools">
-							Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности
-						</li>
-						<li class="list__responsive">
-							Адаптивная вёрстка под все браузеры и&nbsp;устройства
-						</li>
-						<li class="list__programming">
-							Frontend-разработка и&nbsp;программирование
-						</li>
-						<li class="list__coding">
-							Исправление и&nbsp;доработка существующей вёрстки
-						</li>
-					</ul>
-					<a class="orange-button orange-button_size" href="#prices">Узнать стоимость</a>
-				</section>
+		<section class="block block_background-white" id="skills">
+			<div class="container container_flex-column">
+				<h2 class="title">Что я делаю</h2>
+				<ul class="list block__list">
+					<li class="list__tools text">
+						Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности
+					</li>
+					<li class="list__responsive text">
+						Адаптивная вёрстка под все браузеры и&nbsp;устройства
+					</li>
+					<li class="list__programming text">
+						Frontend-разработка и&nbsp;программирование
+					</li>
+					<li class="list__coding text">
+						Исправление и&nbsp;доработка существующей вёрстки
+					</li>
+				</ul>
+				<a class="orange-button orange-button_size-s" href="#prices">Узнать стоимость</a>
 			</div>
 		</section>
-		<section class="section container main__section" id="works">
+		<section class="block container main__swiper-block" id="works">
 			<h2 class="title">Примеры моих работ</h2>
-			<div class="section__layout">
+			<div class="block__layout">
 				<button class="swiper-button-next"></button>
 				<button class="swiper-button-prev"></button>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<figure class="swiper-slide">
 							<img class="swiper-container__image" src="img/img__main/img_1.jpg" alt="work">
-							<figcaption class="text swiper-container__text">Сайт психолога Веры Антоновой</figcaption>
+							<figcaption class="text swiper-slide__text">Сайт психолога Веры Антоновой</figcaption>
 						</figure>
 						<figure class="swiper-slide">
 							<img class="swiper-container__image" src="img/img__main/img_2.jpg" alt="work">
-							<figcaption class="text swiper-container__text">Сайт магазина детской одежды</figcaption>
+							<figcaption class="text swiper-slide__text">Сайт магазина детской одежды</figcaption>
 						</figure>
 						<figure class="swiper-slide">
 							<img class="swiper-container__image" src="img/img__main/img_3.jpg" alt="work">
-							<figcaption class="text swiper-container__text">Сайт магазина &laquo;Рыболов&raquo;</figcaption>
+							<figcaption class="text swiper-slide__text">Сайт магазина &laquo;Рыболов&raquo;</figcaption>
 						</figure>
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-			<button class="orange-button section__order" id="pre-order">Заказать проект</button>
+			<button class="orange-button orange-button_size-m" id="pre-order">Заказать проект</button>
 		</section>
-		<section class="main__wrapper-gradient" id="prices">
-			<div class="main__prices">
-			    <h3 class="main__title">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
-			    <p class="main__text">* Сроки и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
+		<section class="block block_gradient" id="prices">
+			<div class="block__prices">
+			    <h3 class="title title_block-gradient">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
+			    <p class="text text_block-gradient">* Сроки и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
 			</div>
 			<div class="flow-box">
-				<span class="flow flow_white main__brace-right">&#123;&nbsp;&#125;</span>
-				<span class="flow flow_white main__pound">&#8917;</span>
-				<span class="flow flow_white main__div main__div_size_s">&lt;div&gt;</span>
-				<span class="flow flow_white main__tag">&lt;&#47;&gt;</span>
-				<span class="flow flow_white main__brace-left">&#123;&nbsp;&#125;</span>
+				<span class="flow flow-box__brace-white">&#123;&nbsp;&#125;</span>
+				<span class="flow flow-box__pound-white">&#8917;</span>
+				<span class="flow flow-box__div-white flow-box__div-white_size-s">&lt;div&gt;</span>
+				<span class="flow flow-box__tag-white">&lt;&#47;&gt;</span>
+				<span class="flow flow-box__brace-white flow-box__brace-white_rotated">&#123;&nbsp;&#125;</span>
 			</div>
 		</section>
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">
 			<nav class="nav footer__nav">
-				<ul class="nav__list">
-					<li class="item list__item">
-						<a class="nav__link" href="#skills">Услуги</a>
+				<ul class="list nav__list">
+					<li class="list__item">
+						<a class="list__link list__link_color-grey" href="#skills">Услуги</a>
 					</li>
-					<li class="item list__item">
-						<a class="nav__link" href="#works">Портфолио</a>
+					<li class="list__item">
+						<a class="list__link list__link_color-grey" href="#works">Портфолио</a>
 					</li>
-					<li class="item list__item">
-						<a class="nav__link" href="#prices">Стоимость</a>
+					<li class="list__item">
+						<a class="list__link list__link_color-grey" href="#prices">Стоимость</a>
 					</li>
 				</ul>
 			</nav>
-			<ul class="footer__list">
-				<li class="item footer__contacts">
-					<a class="link link_size_l" href="tel:+74999955577"><i class="fa fa-phone" aria-hidden="true"></i>+7 (499) 995-77-55</a>
+			<ul class="list footer__list">
+				<li class="footer__contacts">
+					<a class="phone phone_font-regular" href="tel:+74999955577"><i class="fa fa-phone" aria-hidden="true"></i>+7 (499) 995-77-55</a>
 				</li>
-				<li class="item footer__contacts">
-					<a class="link link_size_l" href="mailto:dmitry@dubov.com"><i class="fa fa-envelope" aria-hidden="true"></i>dmitry@alekseev.com</a>
+				<li class="footer__contacts">
+					<a class="footer__email" href="mailto:dmitry@dubov.com"><i class="fa fa-envelope" aria-hidden="true"></i>dmitry@alekseev.com</a>
 				</li>
 			</ul>
 			<div class="footer__block">
-				<button class="white-button footer__button">Заказать звонок</button>
-				<ul class="list__network">
-					<li class="footer__item">
-						<a class="network item__vk" href="https://vk.com" target="_blank" aria-label="Перейти в Вконтакте"></a>
+				<button class="white-button footer__button" id="footer__callback">Заказать звонок</button>
+				<ul class="list footer-list">
+					<li class="footer-list__item">
+						<a class="network footer-list__vk" href="https://vk.com" target="_blank" aria-label="Перейти в Вконтакте"></a>
 					</li>
-					<li class="footer__item">
-						<a class="network item__fb" href="https://ru-ru.facebook.com" target="_blank" aria-label="Перейти в Фейсбук"></a>
+					<li class="footer-list__item">
+						<a class="network footer-list__fb" href="https://ru-ru.facebook.com" target="_blank" aria-label="Перейти в Фейсбук"></a>
 					</li>
-					<li class="footer__item">
-						<a class="network item__twitter" href="https://twitter.com" target="_blank" aria-label="Перейти в Твиттер"></a>
+					<li class="footer-list__item">
+						<a class="network footer-list__twitter" href="https://twitter.com" target="_blank" aria-label="Перейти в Твиттер"></a>
 					</li>
-					<li class="footer__item">
-						<a class="network item__instagram" href="https://www.instagram.com" target="_blank" aria-label="Перейти в Инстаграм"></a>
+					<li class="footer-list__item">
+						<a class="network footer-list__instagram" href="https://www.instagram.com" target="_blank" aria-label="Перейти в Инстаграм"></a>
 					</li>
 				</ul>
 			</div>

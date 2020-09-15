@@ -1,14 +1,18 @@
 $(function(){
 
-	$('#callback, #pre-order').on('click', function(){
-		$('#layout-order').show(400).css('display', 'flex') && $('#layout-complete').hide();
+	/*White-button's function and modal window*/
+
+	$('#header__callback, #footer__callback, #pre-order').on('click', function(){
+		$('#layout-order').show(400).css('display', 'flex') && $('.main').addClass('main_order-mod') && $('#layout-complete').hide();
 		$('.page').addClass('page_lock');
 	});
 
 	$('.layout__close, .layout__successfull').on('click', function(){
-		$('#layout-order, #layout-complete').hide(400) && $('.page').removeClass('page_lock');
+		$('#layout-order, #layout-complete').hide(400) && $('.page').removeClass('page_lock') && $('.main').removeClass('main_order-mod');
 		$('.layout__form').css('padding', '30px') && $('.layout__alert').hide();
 	});
+
+	/*Order form*/
 
 	$('#order').on('click', function(){
 		let inputName = $('#name').val();
@@ -38,19 +42,23 @@ $(function(){
 		}
 	});
 
+	/*Flow elements*/
+
 	$(document).ready(function(){
-		$('.flow__brace').addClass('flow__brace_animated') && $('.flow__pound').addClass('flow__pound_animated') &&
-		$('.flow__tag-left').addClass('flow__tag-left_animated') && $('.flow__tag-right').addClass('flow__tag-right_animated') &&
-		$('.flow__div-left').addClass('flow__div-left_animated') && $('.flow__div-right').addClass('flow__div-right_animated');
+		$('.flow-box__brace').addClass('flow-box__brace_animated') && $('.flow-box__pound').addClass('flow-box__pound_animated') &&
+		$('.flow-box__tag-left').addClass('flow-box__tag-left_animated') && $('.flow-box__tag-right').addClass('flow-box__tag-right_animated') &&
+		$('.flow-box__div-left').addClass('flow-box__div-left_animated') && $('.flow-box__div-right').addClass('flow-box__div-right_animated');
 		$('.header__burger').click(function(){
 			$('.header__nav').toggleClass('header__nav_active', 3900) && $('.header__burger').toggleClass('active') && 
 			$('.page').toggleClass('page_lock') && $('');
 		});
 	});
 
-	$(".page").on('click', '[href*="#"]', function(e){
+	/*Swiper*/
+
+	$("body").on('click', '[href*="#"]', function(e){
 	  let fixed_offset = 100;
-	  $('html, .page').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 400);
+	  $('html, body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 400);
 	  e.preventDefault();
 	});
 
