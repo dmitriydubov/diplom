@@ -32,6 +32,7 @@ html, .page {
 	font-size: 16px;
 	font-weight: 400;
 	background-color: #fbfbfb;
+	overflow-x: hidden;
 }
 
 .page_lock {
