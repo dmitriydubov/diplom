@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -16,34 +16,61 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script defer src="js/jquery-3.5.1.min.js"></script>
-	<script defer src="js/swiper-bundle.min.js"></script>
+	<script defer src="js/swiper-bundle.js"></script>
 	<script defer src="js/js.js"></script>
 </head>
 <body class="page">
-	<div class="layout" id="layout-order">
-		<form class="layout__form">
+	<div class="layout" id="layout-call">
+		<form class="layout__form" id="callback-form">
 			<span class="layout__alert">Пожалуйста, введите необходимые поля</span>
-			<a class="layout__close" href="#"></a>
-			<h4 class="layout__title">Сделать заказ</h4>
+			<a class="close close_callback-form" href="#"></a>
+			<h4 class="layout__title">Заказать звонок</h4>
 			<label class="layout__label">
 				* Имя:
-				<input class="layout__input" type="text" name="name" aria-label="Введите имя" id="name">
-			</label>
-			<label class="layout__label">
-				* E-mail:
-				<input class="layout__input" type="email" name="email" aria-label="Введите e-mail" id="email">
+				<input class="layout__input" type="text" name="name" aria-label="Введите имя" id="name-callback">
 			</label>
 			<label class="layout__label">
 				* Телефон:
-				<input class="layout__input" type="tel" name="phone" aria-label="Введите телефон" id="phone">
+				<input class="layout__input" type="tel" name="phone" aria-label="Введите телефон" id="phone-callback">
 			</label>
-			<button class="white-button" id="order">Оставить заявку</button>
+			<button class="white-button white-button_callback-mod" id="callback">Заказать звонок</button>
 		</form>
 	</div>
-	<div class="layout" id="layout-complete">
+	<div class="layout" id="layout-order">
+		<form class="layout__form" id="order-form">
+			<span class="layout__alert">Пожалуйста, введите необходимые поля</span>
+			<a class="close" href="#"></a>
+			<h4 class="layout__title">Сделать заказ</h4>
+			<label class="layout__label">
+				* Имя:
+				<input class="layout__input" type="text" name="name" aria-label="Введите имя" id="name-order">
+			</label>
+			<label class="layout__label">
+				* E-mail:
+				<input class="layout__input" type="email" name="email" aria-label="Введите e-mail" id="email-order">
+			</label>
+			<label class="layout__label">
+				* Телефон:
+				<input class="layout__input" type="tel" name="phone" aria-label="Введите телефон" id="phone-order">
+			</label>
+			<label class="layout__label">
+				*Сообщение:
+				<textarea class="layout__message" name="message" id="message-order" cols="40" rows="6"></textarea>
+			</label>
+			<button class="orange-button orange-button_order-mod" id="order">Оставить заявку</button>
+		</form>
+	</div>
+	<div class="layout" id="order-complete">
 		<div class="layout__block">
 			<a class="layout__close" href="#"></a>
 			<div class="layout__text">Спасибо! Ваша Заявка принята</div>
+			<a class="layout__successfull" href="#"></a>
+		</div>
+	</div>
+	<div class="layout" id="callback-complete">
+		<div class="layout__block">
+			<a class="layout__close" href="#"></a>
+			<div class="layout__text">Спасибо! Мы&nbsp;позвоним Вам в&nbsp;ближайшее время!</div>
 			<a class="layout__successfull" href="#"></a>
 		</div>
 	</div>
@@ -66,33 +93,33 @@
 				</ul>
 			</nav>
 			<a class="phone header__phone" href="tel:+74999555577">+7 (499) 995-55-77</a>
-			<button class="white-button" id="header__callback">Заказать звонок</button>
+			<button class="white-button">Заказать звонок</button>
 			<a class="header__phone-button" href="tel:+74999555577" aria-label="Позвонить"></a>
 		</div>
 	</header>
 	<main class="main">
-		<section class="block block_background-ellipse">
+		<section class="main-block">
 			<div class="container">
-				<div class="block__card">
+				<div class="main-block__card">
 					<h1 class="title title_main-title">Дмитрий&nbsp;Алексеев</h1>
 					<p class="text text_about">Frontend-разработчик и веб верстальщик</p>
 					<a class="orange-button" href="#skills">Узнать больше</a>
 				</div>
-				<img class="block__photo" src="img/img__main/shutterstock.png" alt="photo">	
+				<img class="main-block__photo" src="img/img__main/shutterstock.png" alt="photo">	
 			</div>
-			<div class="flow-box">
-				<span class="flow flow-box__brace">&#123;&nbsp;&#125;</span>
-				<span class="flow flow-box__pound">&#8917;</span>
-				<span class="flow flow-box__tag-left">&lt;&#47;&gt;</span>
-				<span class="flow flow-box__tag-right">&lt;&#47;&gt;</span>
-				<span class="flow flow-box__div-left">&lt;div&gt;</span>
-				<span class="flow flow-box__div-right">&lt;div&gt;</span>
+			<div class="main-block__box">
+				<span class="flow main-block__brace">&#123;&nbsp;&#125;</span>
+				<span class="flow main-block__pound">&#8917;</span>
+				<span class="flow main-block__tag-left">&lt;&#47;&gt;</span>
+				<span class="flow main-block__tag-right">&lt;&#47;&gt;</span>
+				<span class="flow main-block__div-left">&lt;div&gt;</span>
+				<span class="flow main-block__div-right">&lt;div&gt;</span>
 			</div>	
 		</section>
-		<section class="block block_background-white" id="skills">
+		<section class="skills-block" id="skills">
 			<div class="container container_flex-column">
 				<h2 class="title">Что я делаю</h2>
-				<ul class="list block__list">
+				<ul class="list skills-block__list">
 					<li class="list__tools text">
 						Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности
 					</li>
@@ -109,9 +136,9 @@
 				<a class="orange-button orange-button_size-s" href="#prices">Узнать стоимость</a>
 			</div>
 		</section>
-		<section class="block container main__swiper-block" id="works">
+		<section class="slider-block container" id="works">
 			<h2 class="title">Примеры моих работ</h2>
-			<div class="block__layout">
+			<div class="slider-block__layout">
 				<button class="swiper-button-next"></button>
 				<button class="swiper-button-prev"></button>
 				<div class="swiper-container">
@@ -134,17 +161,17 @@
 			</div>
 			<button class="orange-button orange-button_size-m" id="pre-order">Заказать проект</button>
 		</section>
-		<section class="block block_gradient" id="prices">
-			<div class="block__prices">
-			    <h3 class="title title_block-gradient">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
-			    <p class="text text_block-gradient">* Сроки и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
+		<section class="prices-block" id="prices">
+			<div class="prices-block__container">
+			    <h3 class="title title_prices-block">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
+			    <p class="text text_prices-block">* Сроки и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
 			</div>
-			<div class="flow-box">
-				<span class="flow flow-box__brace-white">&#123;&nbsp;&#125;</span>
-				<span class="flow flow-box__pound-white">&#8917;</span>
-				<span class="flow flow-box__div-white flow-box__div-white_size-s">&lt;div&gt;</span>
-				<span class="flow flow-box__tag-white">&lt;&#47;&gt;</span>
-				<span class="flow flow-box__brace-white flow-box__brace-white_rotated">&#123;&nbsp;&#125;</span>
+			<div class="prices-block__box">
+				<span class="flow prices-block__brace">&#123;&nbsp;&#125;</span>
+				<span class="flow prices-block__pound">&#8917;</span>
+				<span class="flow prices-block__div prices-block__div_size-s">&lt;div&gt;</span>
+				<span class="flow prices-block__tag">&lt;&#47;&gt;</span>
+				<span class="flow prices-block__brace prices-block__brace_rotated">&#123;&nbsp;&#125;</span>
 			</div>
 		</section>
 	</main>
@@ -172,7 +199,7 @@
 				</li>
 			</ul>
 			<div class="footer__block">
-				<button class="white-button footer__button" id="footer__callback">Заказать звонок</button>
+				<button class="white-button footer__button">Заказать звонок</button>
 				<ul class="list footer-list">
 					<li class="footer-list__item">
 						<a class="network footer-list__vk" href="https://vk.com" target="_blank" aria-label="Перейти в Вконтакте"></a>

@@ -69,21 +69,22 @@ a {
 	width: 100%; height: 100%;
 	background-color: #000000c7;
 	z-index: 100;
+	overflow-y: auto;
 }
 
 .layout__form {
 	position: relative;
 	width: 400px;
 	background-color: #fbfbfb;
-	margin-bottom: 100px;
 	padding: 30px;
 	border-radius: 10px;
 	transition: .4s;
+	text-align: center;
 }
 
-.layout__close {
+.close {
 	position: absolute;
-	right: 20px; top: 20px;
+	right: 20px; top: 24px;
 	width: 35px; height: 35px;
 	background: url('../img/img/close.png')no-repeat;
 	background-size: 35px 35px;
@@ -93,19 +94,25 @@ a {
 	transition: .4s;
 }
 
-.layout__close:hover {
+.close:hover {
 	transform: scale(1.2);
 }
 
+.close_callback-form {
+	top: 17px;
+}
+
 .layout__title {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 
 .layout__label {
 	display: block;
 	color: #8993ad;
-	margin: 30px 0;
+	font-size: 12px;
+	margin: 20px 0;
+	text-align: left;
 }
 
 .layout__input {
@@ -124,8 +131,26 @@ a {
 	background-color: #d8d8d8;
 }
 
-.layout .white-button {
-	margin-left: 65px;
+.layout__message {
+	display: block;
+	margin: 10px 0 15px;
+	padding: 5px;
+	font-size: 15px;
+	border: 1px solid #f82370;
+	border-radius: 10px;
+	transition: .4s;
+	resize: none;
+}
+
+.layout__message:focus {
+	outline: none;
+	background-color: #d8d8d8;
+}
+
+.orange-button_order-mod {
+	padding: 15px 50px;
+	font-size: 15px;
+    border-radius: 10px;
 }
 
 .layout__alert {
@@ -145,13 +170,13 @@ a {
 	position: relative;
 	width: 400px;
 	background-color: #fbfbfb;
-	padding: 30px;
+	padding: 20px;
 	border-radius: 10px;
 }
 
 .layout__text {
 	margin: 50px 0 85px;
-	font-size: 30px;
+	font-size: 25px;
 	color: #3c983c;
 	text-align: center;
 }
@@ -180,6 +205,10 @@ a {
 	padding: 25px 0;
 	background-color: #fbfbfb;
 	z-index: 10;
+}
+
+.header_form-active {
+	position: static;
 }
 
 .container {
@@ -253,6 +282,10 @@ a {
 	outline: none;
 }
 
+.white-button_callback-mod {
+	border-radius: 10px;
+}
+
 
 .header__phone-button {
 	display: none;
@@ -266,17 +299,14 @@ a {
 	margin-top: 100px;
 }
 
-.block {
+.main-block {
 	position: relative;
-}
-
-.block_background-ellipse {
 	background: url('../img/img__main/ellipse.svg') no-repeat;
 	background-size: auto 119%;
     background-position: 110% -8%;
 }
 
-.block__card {
+.main-block__card {
 	margin-bottom: 80px;
 }
 
@@ -326,7 +356,7 @@ a {
 	outline: none;
 }
 
-.block__photo {
+.main-block__photo {
 	margin-left: auto;
 	transform: translateX(75px);
 }
@@ -341,64 +371,65 @@ a {
 	color: #ff2f96;
 }
 
-.flow-box__brace, .flow-box__pound, .flow-box__tag-left, .flow-box__tag-right, .flow-box__div-left, .flow-box__div-right {
-	left: -100%; top: -100%;
-}
-
-.flow-box__brace {
-	transition: transform 2s, left 2s, top 2s;
-}
-
-.flow-box__brace_animated {
+.main-block__brace {
 	transform: rotate(25deg);
-	left: 6.8%; top: 0%;
+	animation: brace 2s ease-out forwards;
 }
 
-.flow-box__pound {
-	transition: transform 2s, left 2s, top 2s;
+@keyframes brace {
+	from { left: -100%; top: -100%; }
+	to { left: 6.8%; top: 0; }
 }
 
-.flow-box__pound_animated {
+.main-block__pound {
 	transform: rotate(24deg);
-    left: 12.8%; top: 36%;
+	animation: pound 2s ease-out forwards;
 }
 
-.flow-box__tag-left {
-	transition: transform 2s, left 2s, top 2s;
+@keyframes pound {
+	from { left: -100%; top: 0; }
+	to { left: 12.8%; top: 36%; }
 }
 
-.flow-box__tag-left_animated {
+.main-block__tag-left {
 	transform: rotate(-22deg);
-    left: 19.5%; top: 84%;
-    font-size: 42px;
+	font-size: 42px;
+	animation: tag-left 2s ease-out forwards;
 }
 
-.flow-box__tag-right {
+@keyframes tag-left {
+	from { left: -100%; top: 200% }
+	to { left: 19.5%; top: 84%; }
+}
+
+.main-block__tag-right {
 	display: none;
 	transition: transform 2s, left 2s, top 2s;
 }
 
-.flow-box__div-left {
-	transition: transform 2s, left 2s, top 2s;
-}
-
-.flow-box__div-left_animated {
+.main-block__div-left {
 	transform: rotate(-10deg);
-    left: 41%; top: 5.5%;
-    font-size: 30px;
+	font-size: 30px;
+	animation: div-left 2s ease-out forwards;
 }
 
-.flow-box__div-right {
-	transition: transform 2s, left 2s, top 2s;
+@keyframes div-left {
+	from { left: -50%; top: -200%; }
+	to { left: 41%; top: 5.5%; }
 }
 
-.flow-box__div-right_animated {
+.main-block__div-right {
 	transform: rotate(21deg);
-    left: 49.5%; top: 64.1%;
-    font-size: 37px;
+	font-size: 37px;
+	animation: div-right 2s ease-out forwards;
 }
 
-.block_background-white {
+@keyframes div-right {
+	from { left: 0; top: -200%; }
+	to { left: 49.5%; top: 64.1%; }
+}
+
+.skills-block {
 	background-color: #fff; 
 	padding: 90px 0;
 }
@@ -407,7 +438,7 @@ a {
 	flex-direction: column;
 }
 
-.block__list {
+.skills-block__list {
 	margin: 85px 0 95px;
 	justify-content: space-between;
 }
@@ -443,12 +474,12 @@ a {
 	padding: 20px 60px;
 }
 
-.main__swiper-block {
+.slider-block {
 	flex-direction: column;
 	margin-top: 100px; margin-bottom: 100px;
 }
 
-.block__layout {
+.slider-block__layout {
 	position: relative;
 	margin: 100px auto 95px;
 	width: 100%;
@@ -522,17 +553,18 @@ a {
 	padding: 20px 70px;
 }
 
-.block_gradient {
+.prices-block {
+	position: relative;
 	background: linear-gradient(to top right, #ff8f5a, #ff8f5a, #ff2f96, #ff2f96);
 	padding: 70px 0 80px;
 }
 
-.block__prices {
+.prices-block__container {
 	width: 49%;
 	margin: 0 auto;
 }
 
-.title_block-gradient {
+.title_prices-block {
 	font-size: 44px;
 	margin-bottom: 28px;
 	text-align: left;
@@ -541,7 +573,7 @@ a {
     letter-spacing: 0.45px;
 }
 
-.text_block-gradient {
+.text_prices-block {
 	width: 80%;
 	font-size: 16px;
 	font-weight: 400;
@@ -550,7 +582,7 @@ a {
     line-height: 1.9;
 }
 
-.flow-box__brace-white {
+.prices-block__brace {
 	left: 6.7%; top: 15.8%;
 	transform: rotate(25deg);
 	background: initial;
@@ -559,12 +591,12 @@ a {
 	color: #fff;
 }
 
-.flow-box__brace-white_rotated {
+.prices-block__brace_rotated {
 	transform: rotate(-15deg);
 	left: 92%; top: 70.7%;
 }
 
-.flow-box__pound-white {
+.prices-block__pound {
 	position: absolute;
 	left: 12.9%; top: 68%;
 	transform: rotate(25deg);
@@ -574,7 +606,7 @@ a {
 	color: #fff;
 }
 
-.flow-box__div-white {
+.prices-block__div {
 	position: absolute;
 	left: 74.4%; top: 83%;
     transform: rotate(24deg);
@@ -584,11 +616,11 @@ a {
 	color: #fff;
 }
 
-.flow-box__div-white_size-s {
+.prices-block__div_size-s {
 	font-size: 35px;
 }
 
-.flow-box__tag-white {
+.prices-block__tag {
 	position: absolute;
 	left: 86.2%; top: 20.5%;
     transform: rotate(-24deg);
