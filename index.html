@@ -55,7 +55,7 @@
 			</label>
 			<label class="layout__label">
 				*Сообщение:
-				<textarea class="layout__message" name="message" id="message-order" cols="40" rows="6"></textarea>
+				<textarea class="layout__message" name="message" id="message-order" cols="28" rows="6"></textarea>
 			</label>
 			<button class="orange-button orange-button_order-mod" id="order">Оставить заявку</button>
 		</form>
@@ -76,25 +76,25 @@
 	</div>
 	<header class="header">	
 		<div class="container">
-			<div class="header__burger">
-				<span class="header__bar"></span>
+			<div class="burger">
+				<span class="burger__bar"></span>
 			</div>
-			<nav class="nav">
-				<ul class="list">
-					<li class="list__item">
-						<a class="list__link" href="#skills">Услуги</a>
+			<nav class="header__nav">
+				<ul class="list header-list">
+					<li class="header-list__item">
+						<a class="header-list__link" href="#skills">Услуги</a>
 					</li>
-					<li class="list__item">
-						<a class="list__link" href="#works">Портфолио</a>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#works">Портфолио</a>
 					</li>
-					<li class="list__item">
-						<a class="list__link" href="#prices">Стоимость</a>
+					<li class="header-list__item">
+						<a class="header-list__link" href="#prices">Стоимость</a>
 					</li>
 				</ul>
 			</nav>
 			<a class="phone header__phone" href="tel:+74999555577">+7 (499) 995-55-77</a>
 			<button class="white-button">Заказать звонок</button>
-			<a class="header__phone-button" href="tel:+74999555577" aria-label="Позвонить"></a>
+			<button class="header__phone-button" aria-label="Заказать звонок"></button>
 		</div>
 	</header>
 	<main class="main">
@@ -103,9 +103,10 @@
 				<div class="main-block__card">
 					<h1 class="title title_main-title">Дмитрий&nbsp;Алексеев</h1>
 					<p class="text text_about">Frontend-разработчик и веб верстальщик</p>
-					<a class="orange-button" href="#skills">Узнать больше</a>
+					<a class="orange-button" href="#skills" id="more-info">Узнать больше</a>
 				</div>
-				<img class="main-block__photo" src="img/img__main/shutterstock.png" alt="photo">	
+				<img class="main-block__photo" src="img/img__main/shutterstock.png" alt="photo">
+				<img class="main-block__photo_mobile" src="img/img__main/shutterstock_mobile.png" alt="photo">	
 			</div>
 			<div class="main-block__box">
 				<span class="flow main-block__brace">&#123;&nbsp;&#125;</span>
@@ -127,13 +128,13 @@
 						Адаптивная вёрстка под все браузеры и&nbsp;устройства
 					</li>
 					<li class="list__programming text">
-						Frontend-разработка и&nbsp;программирование
+						Frontend &#8212; разработка и&nbsp;программирование
 					</li>
 					<li class="list__coding text">
 						Исправление и&nbsp;доработка существующей вёрстки
 					</li>
 				</ul>
-				<a class="orange-button orange-button_size-s" href="#prices">Узнать стоимость</a>
+				<a class="orange-button orange-button_skills-block" href="#prices" id="to-prices">Узнать стоимость</a>
 			</div>
 		</section>
 		<section class="slider-block container" id="works">
@@ -159,12 +160,12 @@
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-			<button class="orange-button orange-button_size-m" id="pre-order">Заказать проект</button>
+			<button class="orange-button orange-button_slider-block" id="pre-order">Заказать проект</button>
 		</section>
 		<section class="prices-block" id="prices">
 			<div class="prices-block__container">
 			    <h3 class="title title_prices-block">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
-			    <p class="text text_prices-block">* Сроки и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
+			    <p class="text text_prices-block">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально в&nbsp;зависимости от&nbsp;сложности задач.</p>
 			</div>
 			<div class="prices-block__box">
 				<span class="flow prices-block__brace">&#123;&nbsp;&#125;</span>
@@ -177,16 +178,16 @@
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">
-			<nav class="nav footer__nav">
-				<ul class="list nav__list">
-					<li class="list__item">
-						<a class="list__link list__link_color-grey" href="#skills">Услуги</a>
+			<nav class="footer__nav">
+				<ul class="list footer-list">
+					<li class="footer-list__item">
+						<a class="footer-list__link" href="#skills">Услуги</a>
 					</li>
-					<li class="list__item">
-						<a class="list__link list__link_color-grey" href="#works">Портфолио</a>
+					<li class="footer-list__item">
+						<a class="footer-list__link" href="#works">Портфолио</a>
 					</li>
-					<li class="list__item">
-						<a class="list__link list__link_color-grey" href="#prices">Стоимость</a>
+					<li class="footer-list__item">
+						<a class="footer-list__link" href="#prices">Стоимость</a>
 					</li>
 				</ul>
 			</nav>
@@ -200,18 +201,18 @@
 			</ul>
 			<div class="footer__block">
 				<button class="white-button footer__button">Заказать звонок</button>
-				<ul class="list footer-list">
-					<li class="footer-list__item">
-						<a class="network footer-list__vk" href="https://vk.com" target="_blank" aria-label="Перейти в Вконтакте"></a>
+				<ul class="network-list">
+					<li class="network-list__item">
+						<a class="network network-list__vk" href="https://vk.com" target="_blank" aria-label="Перейти в Вконтакте"></a>
 					</li>
-					<li class="footer-list__item">
-						<a class="network footer-list__fb" href="https://ru-ru.facebook.com" target="_blank" aria-label="Перейти в Фейсбук"></a>
+					<li class="network-list__item">
+						<a class="network network-list__fb" href="https://ru-ru.facebook.com" target="_blank" aria-label="Перейти в Фейсбук"></a>
 					</li>
-					<li class="footer-list__item">
-						<a class="network footer-list__twitter" href="https://twitter.com" target="_blank" aria-label="Перейти в Твиттер"></a>
+					<li class="network-list__item">
+						<a class="network network-list__twitter" href="https://twitter.com" target="_blank" aria-label="Перейти в Твиттер"></a>
 					</li>
-					<li class="footer-list__item">
-						<a class="network footer-list__instagram" href="https://www.instagram.com" target="_blank" aria-label="Перейти в Инстаграм"></a>
+					<li class="network-list__item">
+						<a class="network network-list__instagram" href="https://www.instagram.com" target="_blank" aria-label="Перейти в Инстаграм"></a>
 					</li>
 				</ul>
 			</div>

@@ -12,7 +12,7 @@
 		table {
 			display: flex;
 			justify-content: center;
-			margin-top: 30px;
+			margin: 30px 0;
 		}
 
 		tbody {

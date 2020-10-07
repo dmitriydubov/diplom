@@ -3,7 +3,7 @@ $(function(){
 	/*button's function and modal window*/
 
 	$(document).ready(function(){
-		$('.white-button').on('click', function(){
+		$('.white-button, .header__phone-button').on('click', function(){
 			$('#layout-call').show(400).css('display', 'flex') && $('#layout-complete').hide();
 			$('.page').addClass('page_lock') && $('.header').addClass('header_form-active');
 		});
@@ -82,7 +82,7 @@ $(function(){
 			}	
 
 			else {
-				$('.layout__form').css('padding', '80px 30px 30px') && $('.layout__alert').show(400);
+				$('.layout__form').css('padding', '60px 30px 30px') && $('.layout__alert').show(400);
 				return false;
 			}
 		});
@@ -91,20 +91,29 @@ $(function(){
 	/*Burger-menu*/
 
 	$(document).ready(function(){
-		$('.header__burger').click(function(){
-			$('.header__nav').toggleClass('header__nav_active', 3900) && $('.header__burger').toggleClass('active') && 
-			$('.page').toggleClass('page_lock') && $('');
+		$('.burger').click(function(){
+			$('.burger').toggleClass('burger_active') && $('.header__nav').toggleClass('header__nav_active') && 
+			$('.page').toggleClass('page_lock');
 		});
 	});
 
+	$(document).on('click', '.header-list__link', e => {
+
+        $('.burger').removeClass('burger_active');
+   		$('.header__nav').removeClass('header__nav_active');
+   		$('.page').removeClass('page_lock');
+    });
+
 	/*anchor*/
-	
-	$('.list__link').on("click", function(e){
-	    e.preventDefault();
-	    const anchor = $(this).attr('href');
-	    $('html, body').stop().animate({
-	        scrollTop: $(anchor).offset().top - 100
-	    }, 400);
+
+	$(document).ready(function(){
+		$('.header-list__link, #more-info, #to-prices, .footer-list__link').on("click", function(e){
+		    e.preventDefault();
+		    const anchor = $(this).attr('href');
+		    $('html, body').stop().animate({
+		        scrollTop: $(anchor).offset().top - 100
+		    }, 400);
+		});
 	});
 
 	/*Swiper*/
@@ -115,7 +124,6 @@ $(function(){
 
 		let mySwiper = new Swiper(slider, {
 
-			spaceBetween: 30,
 			loop: true,
 			speed: 400,
 			slidesPerView: 1,
@@ -138,17 +146,18 @@ $(function(){
 
 		  	breakpoints: {
 
-		  		320: {
-		  			slidesPerView: 1,
+		  		768: {
+		  			slidesPerView: 2,
+		  			spaceBetween: 30,
+		  			centeredSlides: false,
 		  		},
 
-		  		620: {
-		  			slidesPerView: 2,	
+		  		1092: {
+		  			slidesPerView: 3,	
+		  			spaceBetween: 30,
+		  			centeredSlides: false,
 		  		},
 
-		  		1025: {
-		  			slidesPerView: 3,
-		  		},
 		  	},
 		});
 	});

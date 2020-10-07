@@ -3,6 +3,8 @@
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
 
+	mail("schliffen@mail.ru", "Заявка на звонок", "Имя: $name; Телефон: $phone");
+
 	$dbh = new PDO('mysql:host=localhost;dbname=u1129649_default', 'u1129649_default', 'kMGMQ__1');
 
 	$q = "INSERT INTO callback(`time`, name, phone) 

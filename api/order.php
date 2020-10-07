@@ -5,6 +5,8 @@
 	$phone = $_POST['phone'];
 	$message = $_POST['message'];
 
+	mail("schliffen@mail.ru", "Новый заказ", "Имя: $name; E-mail: $email; Телефон: $phone\n\n$message");
+
 	$dbh = new PDO('mysql:host=localhost;dbname=u1129649_default', 'u1129649_default', 'kMGMQ__1');
 
 	$q = "INSERT INTO orders(`time`, name, email, phone, message) 
