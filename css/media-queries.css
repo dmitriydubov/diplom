@@ -120,7 +120,7 @@
 		position: fixed;
 		left: 0; top: 0;
 		transform: translateX(-1000%);
-		transition: .5s;
+		transition: transform .5s;
 		width: 100%; height: 100%;
 		flex-direction: column;
 		background-color: #440539f0;
@@ -146,6 +146,10 @@
    		color: #fff;
 	}
 
+	.header-list__link:hover {
+		background-size: 0 1px;
+	}
+
 	.header__nav_active {
 		transform: translateX(0);
 	}
@@ -165,7 +169,7 @@
 		position: absolute;
 		left: 0;
 		background-size: 48px 5px;
-		transition: .4s;
+		transition: transform .4s;
 	}
 
 	.burger::before {
@@ -183,6 +187,7 @@
 		width: 48px; height: 5px;
 		left: 0; top: 17px;
 		background: linear-gradient(to right, #ff6b71, #ff5a7b, #ff4886) no-repeat;
+		transition: transform .4s;
 	}
 
 	.burger_active::before {
@@ -196,11 +201,11 @@
 	}
 
 	.burger_active .burger__bar {
-		display: none;
+		transform: translateX(-1000%);
 	}
 
 	.main-block {
-		background: url('../img/img__main/ellipse_mobile.svg') no-repeat;
+		background: url('../img/ellipse_mobile.svg') no-repeat;
 		background-size: 90% 99%;
     	background-position: 464% 1770%;
 	}
@@ -573,7 +578,7 @@
 	    width: 45px;
 	    height: 45px;
 	    margin-left: auto;
-	    background: url(../img/img__main/phone.png) no-repeat;
+	    background: url(../img/phone.png) no-repeat;
 	    background-size: 100% 100%;
 	    border: 0;
 	    animation: trembling 2s linear infinite;
@@ -612,7 +617,7 @@
 	}
 
 	.main-block {
-		background: url(../img/img__main/ellipse_320px.svg) no-repeat;
+		background: url(../img/ellipse_320px.svg) no-repeat;
 	    background-size: 141% auto;
     	background-position: 38% 30%;
 	}
@@ -764,6 +769,11 @@
 		color: #fff;
     	background-color: #ff4e2e;
     	padding: 20px 116px;
+	}
+
+	.footer__button:hover {
+		box-shadow: none;
+		background-color: #c12306;
 	}
 
 	.network-list__item {

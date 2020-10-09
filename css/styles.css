@@ -83,7 +83,6 @@ a {
 	margin-top: 50px;
 	padding: 30px;
 	border-radius: 10px;
-	transition: .4s;
 	text-align: center;
 	overflow-y: auto;
 }
@@ -92,12 +91,12 @@ a {
 	position: absolute;
 	right: 20px; top: 20px;
 	width: 35px; height: 35px;
-	background: url('../img/img/close.png')no-repeat;
+	background: url('../img/close.png')no-repeat;
 	background-size: 35px 35px;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	transition: .4s;
+	transition: transform .4s;
 }
 
 .close:hover {
@@ -129,7 +128,6 @@ a {
 	font-size: 15px;
 	border: 1px solid #f82370;
 	border-radius: 10px;
-	transition: .4s;
 }
 
 .layout__input:focus {
@@ -145,7 +143,6 @@ a {
 	width: 100%;
 	border: 1px solid #f82370;
 	border-radius: 10px;
-	transition: .4s;
 	resize: none;
 }
 
@@ -193,12 +190,12 @@ a {
 	position: absolute;
 	left: 43%; bottom: 10%;
 	width: 60px; height: 60px;
-	background: url('../img/img/tick.png')no-repeat;
+	background: url('../img/tick.png')no-repeat;
 	background-size: 60px 60px;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	transition: .4s;
+	transition: transform .4s;
 }
 
 .layout__successfull:hover {
@@ -241,23 +238,11 @@ a {
 .header-list__link {
 	background: linear-gradient(#fc557c, #fc557c) no-repeat 0 100%;
 	background-size: 0 1px;
-	transition: .4s;
+	transition: background-size .4s;
 	padding-bottom: 2px;
 }
 
 .header-list__link:hover {
-	color: #fc557c;
-	background-size: 100% 1px;
-}
-
-.list__link {
-	background: linear-gradient(#fc557c, #fc557c) no-repeat 0 100%;
-	background-size: 0 1px;
-	transition: .4s;
-	padding-bottom: 2px;
-}
-
-.list__link:hover {
 	color: #fc557c;
 	background-size: 100% 1px;
 }
@@ -284,13 +269,12 @@ a {
 	cursor: pointer;
 	background-color: #fbfbfb;
 	box-shadow: inset 0 0 0 0 #f82370;
-	transition: .4s;
+	transition: box-shadow .4s;
 }
 
 .white-button:hover {
 	box-shadow: inset 0 -3.5em 0 0 #f82370;
 	color: #fff;
-	transform: translate(0);
 }
 
 .white-button:active {
@@ -314,13 +298,9 @@ a {
 	margin: 130px 0 0 0;
 }
 
-.main_order-mod {
-	margin-top: 100px;
-}
-
 .main-block {
 	position: relative;
-	background: url('../img/img__main/ellipse.svg') no-repeat;
+	background: url('../img/ellipse.svg') no-repeat;
 	background-size: auto 119%;
     background-position: 110% -8%;
 }
@@ -359,8 +339,7 @@ a {
 	cursor: pointer;
 	color: #fff;
 	background-color: #ff4e2e;
-	transform: translateY(0);
-	transition: .4s;
+	transition: background-color .4s;
 }
 
 .orange-button:hover {
@@ -472,22 +451,22 @@ a {
 }
 
 .list__tools {
-	background: url(../img/img__main/tools.png) no-repeat center top;
+	background: url(../img/tools.png) no-repeat center top;
 	flex: 0 1 22%;
 }
 
 .list__responsive {
-	background: url(../img/img__main/responsive.png) no-repeat center top;
+	background: url(../img/responsive.png) no-repeat center top;
 	flex: 0 1 31%;
 }
 
 .list__programming {
-	background: url(../img/img__main/programming.png) no-repeat center top;
+	background: url(../img/programming.png) no-repeat center top;
 	flex: 0 1 19%;
 }
 
 .list__coding {
-	background: url(../img/img__main/coding.png) no-repeat center top;
+	background: url(../img/coding.png) no-repeat center top;
 	flex: 0 1 24%;
 }
 
@@ -684,7 +663,7 @@ a {
 	color: #8993ad;
 	background: linear-gradient(#fc557c, #fc557c) no-repeat 0 100%;
 	background-size: 0 1px;
-	transition: .4s;
+	transition: background-size .4s;
 	padding-bottom: 2px;
 }
 
@@ -751,19 +730,19 @@ a {
 }
 
 .network-list__vk {
-    background: url('../img/img__footer/css_sprites.png') -140px -5px;
+    background: url('../img/css_sprites.png') -140px -5px;
 }
 
 .network-list__fb {
-    background: url('../img/img__footer/css_sprites.png') -0 -10px;
+    background: url('../img/css_sprites.png') -0 -10px;
 }
 
 .network-list__twitter {
-    background: url('../img/img__footer/css_sprites.png') -87px -8px;
+    background: url('../img/css_sprites.png') -87px -8px;
 }
 
 .network-list__instagram {
-    background: url('../img/img__footer/css_sprites.png') -40px -8px;
+    background: url('../img/css_sprites.png') -40px -8px;
 }
 
 .footer__copyright {
