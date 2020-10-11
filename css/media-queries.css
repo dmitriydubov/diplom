@@ -575,13 +575,14 @@
 
 	.header__phone-button {
 	    display: block;
+	    position: relative;
 	    width: 45px;
 	    height: 45px;
 	    margin-left: auto;
-	    background: url(../img/phone.png) no-repeat;
+	    background: url(../img/phone.svg) no-repeat;
 	    background-size: 100% 100%;
-	    border: 0;
 	    animation: trembling 2s linear infinite;
+	    border: 0;
 	}
 
 	.header__phone-button:focus {
